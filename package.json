@@ -1,8 +1,8 @@
 {
   "name": "time-patrol",
-  "description": "",
-  "version": "0.0.1",
-  "author": "",
+  "description": "A slack times channel client",
+  "version": "0.1.0",
+  "author": "Shuhei YOSHIDA <contact@yantene.net>",
   "dependencies": {
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
