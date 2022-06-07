@@ -1,0 +1,47 @@
+name: Linter
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Read .tool-versions
+        uses: marocchino/tool-versions-action@v1
+        id: tool_versions
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ steps.tool_versions.outputs.nodejs }}
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: ESLint reviewdog
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: error
+          eslint_flags: '{src,apps,libs,test}/**/*.ts'
+
+      - name: Prettier
+        run: |
+          npm run lint:prettier
+
+      - name: Fixpack
+        run: |
+          npm run format:fixpack
