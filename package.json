@@ -55,7 +55,7 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "nest build",
