@@ -1,4 +1,4 @@
 const hello = "world"
-  var world = "hello"
+  let world = "hello"
 
     console.log(world)
