@@ -1,4 +1,3 @@
-const hello = "world"
-  let world = "hello"
-
-    console.log(world)
+const hello = "world";
+  const world = "hello";
+    console.log(hello + world);
