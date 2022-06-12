@@ -23,6 +23,8 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -62,6 +64,7 @@
   "private": true,
   "scripts": {
     "build": "nest build",
+    "cz": "cz",
     "format": "run-s -c format:*",
     "format:eslint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "format:fixpack": "fixpack",
