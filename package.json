@@ -65,6 +65,7 @@
     "format:prettier": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "run-s -c lint:*",
     "lint:eslint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:fixpack": "fixpack --dryRun",
     "lint:prettier": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
     "prebuild": "rimraf dist",
     "start": "nest start",
