@@ -1,0 +1,21 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": ".",
+    "sourceType": "module"
+  },
+  "env": {
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": ["dist/**/*", "node_modules/**/*"],
+  "extends": ["airbnb-base", "airbnb-typescript/base", "prettier"],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-default-export": 2,
+    "@typescript-eslint/explicit-module-boundary-types": 2
+  }
+}

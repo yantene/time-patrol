@@ -36,7 +36,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           level: error
-          eslint_flags: '{src,apps,libs,test}/**/*.ts'
+          eslint_flags: "{src,apps,libs,test}/**/*.ts"
 
       - name: Prettier
         run: |
