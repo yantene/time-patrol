@@ -1,0 +1,17 @@
+{
+  "name": "dev",
+  "dockerComposeFile": ["compose.yml"],
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "remoteEnv": {
+    "EDITOR": "code --wait"
+  },
+  "remoteUser": "devuser",
+  "initializeCommand": "${localWorkspaceFolder}/.devcontainer/commands/initialize.sh",
+  "postCreateCommand": ".devcontainer/commands/post_create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["KnisterPeter.vscode-commitizen"]
+    }
+  }
+}
